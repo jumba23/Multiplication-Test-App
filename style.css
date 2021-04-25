@@ -1,0 +1,40 @@
+body{
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+h2{
+    padding-top: 5%;
+    text-align: center;
+}
+
+#gameBoard {
+    width: 580px;
+    margin: auto;
+    background-color: rgb(176, 235, 235);
+    border: 5px solid #ffcc5c;
+      }
+
+  #gameBoard > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #0f0d06;
+  }
+
+  #timerCounter, #resetScore{
+    display: flex;
+  }
+
+  #questionAnswer {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  #resetScore{
+      justify-content: space-around;
+  }
+
+  #mistakesAllowed{
+      margin-left: auto;
+  }
