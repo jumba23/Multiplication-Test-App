@@ -42,7 +42,9 @@ h1{
     border: none;
     background-color: rgb(176, 235, 235);
     width: 60px;
-    font-size: 30px;
+    padding-left: 10px;
+    font-size: 35px;
+    color: green;
 } 
 
   label[for="totalCount"]{
@@ -83,6 +85,7 @@ h1{
   #mathProblem {
     background-color: rgb(176, 235, 235);
     color: black;
+    width: 400px;
   }
 
   #individualTimer{
@@ -104,3 +107,6 @@ h1{
   #yourAnswer:focus {
       outline: auto;
   }
+
+
+

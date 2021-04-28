@@ -6,28 +6,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
     <h1>Test Your Multiplication Skills Here!</h1>
+    <form id="form">
     <div id="gameBoard">
         <div id="timerCounter">
             <div id="individualTimer">
                    Time Remaining: 3s
             </div>
             <div id="mistakesAllowed">
-                <img class="smileFace" src="smiling-face.png" alt="smiling-face"> <img class="smileFace" src="smiling-face.png" alt="smiling-face"> <img class="smileFace" src="smiling-face.png" alt="smiling-face">
+                <img id="firstPic" src="smiling-face.png" > <img id="secondPic" src="smiling-face.png" > <img id="thirdPic" src="smiling-face.png">
             </div>
         </div>
         <div id="questionAnswer">
-            <input type="text" id="mathProblem" placeholder="7 x 8"readonly>
-            <input type="text" id="yourAnswer"  placeholder="56">
-            <button type="button" id="answerButton">ANSWER</button>
+            <input type="text" id="mathProblem" readonly>
+            <input type="text" id="yourAnswer" autocomplete="off" >
+            <button type="submit" id="answerButton">ANSWER</button>
         </div>
         <div id="resetAndScore">
             <button type="button" id="resetButton">START OVER</button>
             <label for="totalCount">Total Count:</label>
-            <input type="text" id="totalCount" placeholder="45" readonly>
+            <input type="text" id="totalCount" >
             <label for="thisStreak">This Streak:</label>
-            <input type="text" id="thisStreak" placeholder="10" readonly>
+            <input type="text" id="thisStreak" >
         </div>
-
+        <script src="script.js"></script>
     </div>
-
+</form>
 </html>
