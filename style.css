@@ -26,6 +26,8 @@ h1{
     display: flex;
   }
 
+
+
   #questionAnswer {
       margin-top: 20%;
       display: flex;
@@ -89,10 +91,23 @@ h1{
   }
 
   #individualTimer{
+      border: 2px solid #ffcc5c;
       display: flex;
       align-items: center;
-      font-size: 30px;
-  }
+      width: 200px;
+      height: 30px;
+      position: relative;
+      background-color: #ddd;
+ }
+
+ #progressBar{
+      display: flex;
+      align-items: center; 
+      background-color: #15af1a;
+      width: 20px;
+      height: 30px;
+      position: absolute;
+ }
 
   label{
     display: flex;
