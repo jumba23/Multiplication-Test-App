@@ -43,15 +43,13 @@ getRandomNumbers();
 
 function noAnswer(){
     if (displayAnswer.value == '' && wrongAnswer < 2){
-        console.log(displayAnswer.value);
         wrongAnswer ++;
         thisStreak = '0';
         timerBarWidth = '0';
         displayStreak.value = thisStreak;
-        console.log(wrongAnswer);
+        smileFaces();
         clearInterval(timer);
         clearInterval(timePassed);
-        smileFaces();
         getRandomNumbers();
         timePassed = setInterval(timerBar, 25);
         timer = setInterval(() =>{
@@ -59,7 +57,6 @@ function noAnswer(){
             noAnswer();
         },5000);
     } else {
-        clearInterval(timer);
         gameOver();
     }
 }
@@ -77,9 +74,7 @@ function checkAnswer(e){
         displayAnswer.value = '';
         timerBarWidth = '0';
         clearInterval(timer);
-        clearInterval(timePassed);
         getRandomNumbers();
-        timePassed = setInterval(timerBar, 25);
         timer = setInterval(() =>{
             getRandomNumbers();
             noAnswer();
