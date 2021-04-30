@@ -4,33 +4,37 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form id="form">
-    <h1>Test Your Multiplication Skills Here!</h1>
-     <div id="gameBoard">
-        <div id="timerCounter">
-            <div id="individualTimer">
-                   <div id="progressBar"></div>
+    <div id="formWrap">
+        <h1>Test Your Multiplication Skills Here!</h1>
+        <form id="form">
+    
+            <div id="gameBoard">
+                <div id="timerCounter">
+                   <div id="individualTimer">
+                        <div id="progressBar"></div>
+                    </div>
+                    <div id="mistakesAllowed">
+                         <img id="firstPic" src="smiling-face.png" > <img id="secondPic" src="smiling-face.png" > <img id="thirdPic" src="smiling-face.png">
+                    </div>
+                </div>
+                <div id="questionAnswer">
+                        <input type="text" id="mathProblem" readonly>
+                        <input type="number" id="yourAnswer" min="0" max="99" autocomplete="off"  >
+                        <button type="submit" id="answerButton">ANSWER</button>
+                </div>
+                <div id="resetAndScore">
+                        <button type="button" id="resetButton">START OVER</button>
+                        <label for="totalCount">Total Count:</label>
+                        <input type="text" id="totalCount" >
+                        <label for="thisStreak">This Streak:</label>
+                        <input type="text" id="thisStreak" >
+                </div>
             </div>
-            <div id="mistakesAllowed">
-                <img id="firstPic" src="smiling-face.png" > <img id="secondPic" src="smiling-face.png" > <img id="thirdPic" src="smiling-face.png">
-            </div>
-        </div>
-        <div id="questionAnswer">
-            <input type="text" id="mathProblem" readonly>
-            <input type="text" id="yourAnswer" autocomplete="off" >
-            <button type="submit" id="answerButton">ANSWER</button>
-        </div>
-        <div id="resetAndScore">
-            <button type="button" id="resetButton">START OVER</button>
-            <label for="totalCount">Total Count:</label>
-            <input type="text" id="totalCount" >
-            <label for="thisStreak">This Streak:</label>
-            <input type="text" id="thisStreak" >
-        </div>
-        <script src="script.js"></script>
+        </form>
     </div>
-</form>
+<script src="script.js"></script>
 </body>
 </html>

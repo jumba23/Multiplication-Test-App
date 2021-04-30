@@ -1,11 +1,16 @@
 body{
     margin: 0 auto;
     font-family: 'Chewy', sans-serif;
+    background-image: url("Math\ Background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 h1{
     padding-top: 5%;
     text-align: center;
+    font-size: 40px;
 }
 
 #gameBoard {
@@ -16,7 +21,8 @@ h1{
       }
 
   #gameBoard > div {
-    padding: 10px;
+    padding: 15px;
+    width: 95%;
     text-align: center;
     font-size: 1em;
     color: #0f0d06;
@@ -25,8 +31,6 @@ h1{
   #timerCounter, #resetAndScore{
     display: flex;
   }
-
-
 
   #questionAnswer {
       margin-top: 20%;
@@ -119,9 +123,118 @@ h1{
       outline:none;
   }
 
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+  }
+
   #yourAnswer:focus {
       outline: auto;
   }
 
 
+@media screen and (max-width: 370px) {
+  #formWrap{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    padding-bottom: 5%;
+    font-size: 25px;
+  }
+
+  #gameBoard {
+    width: 97%;
+    margin: 0 auto;
+    padding: 0;
+   }
+
+  #mathProblem, #yourAnswer {
+    width: 40%;
+    font-size:  60px;
+  }
+
+  #mathProblem {
+    width: 97%;
+  }
+
+  #questionAnswer {
+    width: 97%;
+    padding: 0;
+  }
+
+  label{
+    font-size: 18px;
+  }
+
+  #resetButton{
+    width: 20%;
+    font-size: 10px;
+  }
+
+  #answerButton {
+    width: 35%;
+    font-size: 30px;
+  }
+} 
+
+@media screen and (max-width: 450px) and (min-width: 380px) {
+  #formWrap{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    padding-bottom: 5%;
+    font-size: 25px;
+  }
+
+  #gameBoard > div {
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    color: #0f0d06;
+      }
+
+  #gameBoard {
+    width: 90%;
+    margin: 0;
+    padding: 15px;
+   }
+
+  #mathProblem, #yourAnswer {
+    width: 40%;
+    font-size:  60px;
+  }
+
+  #mathProblem {
+    width: 97%;
+  }
+
+  #questionAnswer {
+    width: 97%;
+    padding: 0;
+  }
+
+  label{
+    font-size: 18px;
+  }
+
+  #resetButton{
+    width: 20%;
+    font-size: 10px;
+  }
+
+  #answerButton {
+    width: 35%;
+    font-size: 30px;
+  }
+}
 

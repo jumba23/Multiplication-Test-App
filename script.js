@@ -2,6 +2,7 @@ let result = '';
 let totalCount = '0';
 let thisStreak = '0';
 let wrongAnswer = '0';
+let timerBarWidth = '0';
 
 
 const smileFaceOne = document.querySelector('#firstPic');
@@ -12,40 +13,48 @@ const displayStreak = document.querySelector('#thisStreak');
 const displayCount = document.querySelector('#totalCount');
 const displayAnswer = document.querySelector('#yourAnswer');
 const displayQuestion = document.querySelector('#mathProblem');
+const progress = document.getElementById('progressBar');
 
+let timer = setInterval(() =>{
+        getRandomNumbers();
+        noAnswer();
+},5000);
+
+let timePassed = setInterval(timerBar, 25);
+
+function timerBar() {
+    console.log(timerBarWidth);
+    if (timerBarWidth == 195 || wrongAnswer == 3) {
+    clearInterval(timePassed);
+    } else {
+    timerBarWidth ++; 
+    progress.style.width = timerBarWidth + 5; 
+    }
+}
 
 function getRandomNumbers(){
     const numberOne = Math.floor(Math.random() * 10);
     const numberTwo = Math.floor(Math.random() * 10);
     displayQuestion.value = `${numberOne} x ${numberTwo}`;
     result = numberOne * numberTwo;
- }
-
-
-
-let timer = setInterval(() =>{
-        getRandomNumbers();
-        remainingTime();
-        noAnswer();
-},5000);
+}
 
 getRandomNumbers();
-remainingTime();
-
-document.querySelector('#answerButton').addEventListener('click',checkAnswer);
 
 function noAnswer(){
     if (displayAnswer.value == '' && wrongAnswer < 2){
         console.log(displayAnswer.value);
         wrongAnswer ++;
         thisStreak = '0';
+        timerBarWidth = '0';
         displayStreak.value = thisStreak;
         console.log(wrongAnswer);
+        clearInterval(timer);
+        clearInterval(timePassed);
         smileFaces();
         getRandomNumbers();
-        clearInterval(timer);
+        timePassed = setInterval(timerBar, 25);
         timer = setInterval(() =>{
-            remainingTime()
             getRandomNumbers();
             noAnswer();
         },5000);
@@ -54,6 +63,8 @@ function noAnswer(){
         gameOver();
     }
 }
+
+document.querySelector('#answerButton').addEventListener('click',checkAnswer);
 
 function checkAnswer(e){
     e.preventDefault();
@@ -64,13 +75,15 @@ function checkAnswer(e){
         displayCount.value = totalCount;
         displayStreak.value = thisStreak;
         displayAnswer.value = '';
-        getRandomNumbers();
+        timerBarWidth = '0';
         clearInterval(timer);
+        clearInterval(timePassed);
+        getRandomNumbers();
+        timePassed = setInterval(timerBar, 25);
         timer = setInterval(() =>{
             getRandomNumbers();
             noAnswer();
-            remainingTime();
-        },5000);
+           },5000);
         } else {
             displayStreak.value = '0';
             displayAnswer.value = '';
@@ -79,22 +92,6 @@ function checkAnswer(e){
             smileFaces();
          }            
 }    
-
-function remainingTime() {
-    let progress = document.getElementById('progressBar');   
-    let width = 0;
-    let timePassed = setInterval(bar, 25);
-    function bar() {
-        console.log(width);
-      if (width == 195) {
-        clearInterval(timePassed);
-      } else {
-        width ++; 
-        progress.style.width = width + 5; 
-       }
-    }
- }
-
 
 function smileFaces(){
     if(wrongAnswer === 1){
@@ -106,12 +103,14 @@ function smileFaces(){
     } else {
         console.log(wrongAnswer);
         smileFaceThree.style.display = 'none';
+        gameOver();
         }
 }
 
 function gameOver(){
-    displayQuestion.value = 'GAME OVER!!!!';
+    displayQuestion.value = 'DONE!!';
     clearInterval(timer);
+    clearInterval(timePassed);
     smileFaceThree.style.display = 'none';
     }
 
@@ -120,6 +119,7 @@ document.querySelector('#resetButton').addEventListener('click', () => {
             displayCount.value = '';
             displayAnswer.value = '';
             displayQuestion.value = '';
+            timerBarWidth = '0';
             result = '';
             wrongAnswer = '0';
             totalCount = '0';
@@ -128,29 +128,11 @@ document.querySelector('#resetButton').addEventListener('click', () => {
             smileFaceTwo.style.display = '';   
             smileFaceThree.style.display = '';
             getRandomNumbers();
-            remainingTime();
             clearInterval(timer);
+            clearInterval(timePassed);
+            timePassed = setInterval(timerBar, 25);
             timer = setInterval(() =>{
                 getRandomNumbers();
-                remainingTime()
                 noAnswer();
             },5000);
 });
-
-// const playGame = () => {
-//     setInterval(function () {
-//         drawGameBoard();
-//         drawApple();
-//         drawBody();
-//         drawHead();
-//         boundaryCheck();
-//         appleCheck();
-//         bodyCheck();
-//         checkGameOver();
-//     }, 1000 / FRAMES_PER_SECOND);
-//     getRandomApplePos();
-// }
-
-// window.onload = () => {
-//     getRandomNumbers();
-// }
