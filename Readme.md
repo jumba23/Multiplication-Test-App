@@ -2,7 +2,6 @@
 This is kids friendly app for testing multiplication skills (0-10). 
 
 Try it - [Multiplication-Test-App](https://jumba23.github.io/Multiplication-Test-App/)
-![Screenshot Mulitip App](https://user-images.githubusercontent.com/80366503/193487318-9d32cc2c-f228-4fd7-9362-c8773f7777d5.gif)
 
 # Application 
 ![App Screen](https://user-images.githubusercontent.com/80366503/193487318-9d32cc2c-f228-4fd7-9362-c8773f7777d5.gif)
