@@ -20,17 +20,25 @@
                          <img id="firstPic" src="smiling-face.png" > <img id="secondPic" src="smiling-face.png" > <img id="thirdPic" src="smiling-face.png">
                     </div>
                 </div>
+                <div id="playerName"> </div>
                 <div id="questionAnswer">
                         <input type="text" id="mathProblem" readonly>
                         <input type="number" id="yourAnswer" min="0" max="99" autocomplete="off"  >
-                        <button type="submit" id="answerButton">ANSWER</button>
+                        <button type="submit" id="answerButton">Submit</button>
+                </div>
+                <div id="high-scores">High Scores
+                    <ol id="hs-list">
+                            <li id="li-1"></li>
+                            <li id="li-2"></li>
+                            <li id="li-3"></li>
+                    </ul>
                 </div>
                 <div id="resetAndScore">
                         <button type="button" id="resetButton">START OVER</button>
                         <label for="totalCount">Total Count:</label>
-                        <input type="text" id="totalCount" >
+                        <input type="text" id="totalCount" readonly>
                         <label for="thisStreak">This Streak:</label>
-                        <input type="text" id="thisStreak" >
+                        <input type="text" id="thisStreak" readonly>
                 </div>
             </div>
         </form>
