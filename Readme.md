@@ -1,13 +1,13 @@
-Multiplication-Test-App
-This is kids friendly app for testing multiplication skills. Written using HTML, CSS, and Javascript.
+# Multiplication-Test-App
+This is kids friendly app for testing multiplication skills (0-10). 
 
-Current functionalities:
-  1. Answers are time sensitive. 
-  2. Game offers 3 opportunities for mistake.
-  3. No answer = one smile face less or one opportunity less.
-  4. Keeps track of total score and current streak.
-  5. New question is generated every 5 seconds.
+Try it - [Multiplication-Test-App](https://jumba23.github.io/Multiplication-Test-App/)
 
-Functionalities to be added:
-  1. High Score 
-  2. Timer - timer speed increase as user’s score (skill) improves.
+# Application 
+![App Screen]()
+
+# Summary 
+This application is made to test multiplication skills for numbers from 0-10. The app comes with 5 seconds timer so you can feel a bit of pressure while trying to provide correct answer. Three opportunities are given before the game ends. High score list is made to provide some accountability and competition if needed. The entire app is written using Javascript, HTML and CSS.  
+
+# About Me
+Goran Cvetic - Software Developer - [LinkedIn](https://www.linkedin.com/in/goran-cvetic/) 

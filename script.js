@@ -1,6 +1,3 @@
-// add local memory storage for high scores
-// have a timer count down before first math problem is generated - something like a pop-up box
-// at the end, if Total count is > high scores value, pop-up window for a user to add their names
 let result = "";
 let totalCount = "0";
 let thisStreak = "0";
