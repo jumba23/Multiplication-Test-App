@@ -23,7 +23,6 @@ function createLocalStorage() {
 }
 
 function displayHighScores(highScores) {
-  console.log(highScores);
   document.getElementById(
     "li-1"
   ).innerHTML = `${highScores[0].playerName} ${highScores[0].score}`;
